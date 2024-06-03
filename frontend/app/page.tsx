@@ -1,11 +1,10 @@
 import Hero from "@/components/Hero";
-import Image from "next/image";
 
 export default function Home() {
   return (
     <main>
       <div>
-        <Hero />
+        <Hero heading="Achiomwa Edits" message="Elevate Your Listings with Professional Editing." />
       </div>
     </main>
   );
