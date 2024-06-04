@@ -15,6 +15,7 @@ const Portfolio = () => {
                     width={700}
                     height={500}
                     priority
+                    className='w-full h-auto'
                 />
             </div>
 
@@ -25,7 +26,7 @@ const Portfolio = () => {
                         alt="/"
                         width={500}
                         height={700}
-                        className='object-cover'
+                        className='object-cover w-full h-auto'
                     />
 
                     <Image
@@ -33,7 +34,7 @@ const Portfolio = () => {
                         alt="/"
                         width={500}
                         height={700}
-                        className='object-cover'
+                        className='object-cover w-full h-auto'
                     />
 
                     <Image
@@ -41,7 +42,7 @@ const Portfolio = () => {
                         alt="/"
                         width={500}
                         height={700}
-                        className='object-cover'
+                        className='object-cover w-full h-auto'
                     />
 
                     <Image
@@ -49,7 +50,7 @@ const Portfolio = () => {
                         alt="/"
                         width={500}
                         height={700}
-                        className='object-cover'
+                        className='object-cover w-full h-auto'
                     />
 
                 </div>
