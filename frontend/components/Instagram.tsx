@@ -14,11 +14,15 @@ import { StaticImageData } from 'next/image'
 
 const Instagram = ({ socialImg }: { socialImg: StaticImageData }) => {
     return (
-        <div>
-            <p>Follow me on Instagram</p>
-            <p>@ACHIOMWA</p>
-            <div>
-                <InstaImage socialImg={Img1} />
+        <div className='max-w-[1240px] mx-auto text-center py-24'>
+            <p className="text-2xl font-bold">Follow me on Instagram</p>
+            <p className='pb-4'>@Achiomwa</p>
+            <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 p-4'>
+                {[Img1, Img2, Img3, Img4, Img5, Img6, Img7, Img9].map((img, index) => (
+                    <div key={index} className="flex items-center justify-center">
+                        <InstaImage socialImg={img} />
+                    </div>
+                ))}
             </div>
         </div>
     )
