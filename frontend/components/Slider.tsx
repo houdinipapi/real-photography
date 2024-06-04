@@ -26,42 +26,44 @@ const Slider = ({ slides }: { slides: any[] }) => {
   return (
     <div id="gallery" className='max-w-[1240px] mx-auto'>
         <h1 className='text-2xl font-bold text-center p-4'>Gallery</h1>
+
+        <div className='relative flex justify-center p-4'>
             {SliderData.map((slide, index) => {
                 return (
                     <div key={index} className={index === current ? "opacity-[1] ease-in duration-1000" : "opacity-0"}>
-                        <div className='relative flex justify-center p-4'>
-                            <div className="absolute top-[50%] left-[30px] text-white/70 cursor-pointer select-none z-[2]">
-                                <FaArrowCircleLeft
-                                    onClick={prevSlide}
-                                    size={50}
+                        
+                        <div className="absolute top-[50%] left-[30px] text-white/70 cursor-pointer select-none z-[2]">
+                            <FaArrowCircleLeft
+                                onClick={prevSlide}
+                                size={50}
+                            />
+                        </div>
+                        {
+                            index === current && (
+                                <Image
+                                    key={index}
+                                    src={slide.image}
+                                    alt="/"
+                                    width={1440}
+                                    height={600}
+                                    style={{ objectFit: "cover" }}
+                                    priority
                                 />
-                            </div>
-                            {
-                                index === current && (
-                                    <Image
-                                        key={index}
-                                        src={slide.image}
-                                        alt="/"
-                                        width={1440}
-                                        height={600}
-                                        style={{ objectFit: "cover" }}
-                                        priority
-                                    />
-                                )
-                            }
+                            )
+                        }
 
-                            <div className="absolute top-[50%] right-[30px] text-white/70 cursor-pointer select-none z-[2]">
-                                <FaArrowCircleRight
-                                    onClick={nextSlide}
-                                    size={50}
-                                />
-                            </div>
+                        <div className="absolute top-[50%] right-[30px] text-white/70 cursor-pointer select-none z-[2]">
+                            <FaArrowCircleRight
+                                onClick={nextSlide}
+                                size={50}
+                            />
                         </div>
                         
                     </div>
                     
                 )
             })}
+        </div>
     </div>
   )
 }
