@@ -10,9 +10,9 @@ import Img8 from '../public/images/Img8.jpg'
 import Img9 from '../public/images/Img9.jpg'
 import Img10 from '../public/images/Img10.jpg'
 import InstaImage from './InstaImage'
-import { StaticImageData } from 'next/image'
 
-const Instagram = ({ socialImg }: { socialImg: StaticImageData }) => {
+
+const Instagram = () => {
     return (
         <div className='max-w-[1240px] mx-auto text-center py-24'>
             <p className="text-2xl font-bold">Follow me on Instagram</p>
