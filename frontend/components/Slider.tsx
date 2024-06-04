@@ -33,10 +33,9 @@ const Slider = ({ slides }: { slides: any[] }) => {
                     <div key={index} className={index === current ? "opacity-[1] ease-in duration-1000" : "opacity-0"}>
                         
                         <div className="absolute top-[50%] left-[30px] text-white/70 cursor-pointer select-none z-[2]">
-                            <FaArrowCircleLeft
-                                onClick={prevSlide}
-                                size={50}
-                            />
+                            <span onClick={prevSlide}>
+                                <FaArrowCircleLeft size={50} />
+                            </span>
                         </div>
                         {
                             index === current && (
@@ -53,10 +52,9 @@ const Slider = ({ slides }: { slides: any[] }) => {
                         }
 
                         <div className="absolute top-[50%] right-[30px] text-white/70 cursor-pointer select-none z-[2]">
-                            <FaArrowCircleRight
-                                onClick={nextSlide}
-                                size={50}
-                            />
+                            <span onClick={nextSlide}>
+                                <FaArrowCircleRight size={50} />
+                            </span>
                         </div>
                         
                     </div>
